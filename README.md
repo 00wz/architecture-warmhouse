@@ -22,36 +22,29 @@
 - монолитного сервиса на GO
 - субд postgres
 - сервиса temperature-api
+
 взаимодействие сервиса на GO с базой с помощью pgx.
+
 взаимодействие сервиса на GO с temperature-api через http
 
 ### 3. Определение доменов и границы контекстов
 
-Опишите здесь домены, которые вы выделили.
+- управление температурой
+- мониторинг температуры
+- слой данных 
+- маршрутизация и healthcheck (в один api gateway)
+- (возможно, слой представления, фронт)
 
 ### **4. Проблемы монолитного решения**
 
-- …
-- …
-- …
-
-Если вы считаете, что текущее решение не вызывает проблем, аргументируйте свою позицию.
+- жесткая связанность доменов (изменения в одном домене требуют перекомпиляции всего приложения)
+- единая база для всех доменов (все типы датчиков в одной базе)
+- сложность в тестировании (необходимо развертывать все приложение для тестирования изменений в одном домене)
+- один язык на весь проект без возможности вариативности
 
 ### 5. Визуализация контекста системы — диаграмма С4
 
-Добавьте сюда диаграмму контекста в модели C4.
-
-Чтобы добавить ссылку в файл Readme.md, нужно использовать синтаксис Markdown. Это делают так:
-
-```markdown
-[Текст ссылки](URL)
-```
-
-Замените `Текст ссылки` текстом, который хотите использовать для ссылки. Вместо `URL` вставьте адрес, на который должна вести ссылка. Например:
-
-```markdown
-[Посетите Яндекс](https://ya.ru/)
-```
+[диаграмма контекста в модели C4](https://www.planttext.com?text=RPBBIiD058RtXRv3xAg2RJQkN0d5dO8ehgMcWmQIj6GcNdQzA2ug5g7hYle2lHWQUts5Cs_aVwOjhHS2cSoSV_xpdNEoBrKnL97lMONTyq8vKE9MfLDRRk1uKKbOLqfLv9vjXyMR_AMhhgABI8hGOLsWyaxPjojUCU3xEQbAddjX5tPpntnqTdHe-qMfH6YldVCLADEfT4gvoXCMjIcXBWrq5Uy9dgv58vhHLDSfff6kOSNH9urrQn6Pq1pIAQubLeRUzGlsOzsaBrOXd67pOn7ASf1r8gdAlWXte7n5SAoVQ8YrJrtZZts6OnyqDm1zJaEnhbiqWs36rf1nifWc5Z8Q8Hl4khgK6YUcYjb3rtK3eKPccpbExr2-dvLcuKplqFxYvUCEzN2zPamUaGs02um9zu8IXe5xWky1O-Z6cdW5-2_p9iRvmQtAbiIrwmZ9ITk6bjEDk3AuLhadxDHVma7nO03ViEk1WojyNXKzDeM3az7qi-bFOgf0gp72bf4kfyOp-zJDVz1rQq5v8hoDYQrxzdSwW8uDxD3YKL0lnwrX9hJ-7WTVkiQUxBZosIYy0-MVWG-nDSF5FzSqfVpWNY3kYw24__SR)
 
 # Задание 2. Проектирование микросервисной архитектуры
 
