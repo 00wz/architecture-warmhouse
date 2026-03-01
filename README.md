@@ -29,14 +29,14 @@
 
 ### 3. Определение доменов и границы контекстов
 
-- управление температурой
-- мониторинг температуры
+- управление устройствами
+- мониторинг телеметрии
 - слой данных 
-- маршрутизация и healthcheck (в один api gateway)
+- маршрутизация (api gateway)
 - (возможно, слой представления, фронт)
 
 ### **4. Проблемы монолитного решения**
-
+- единый свпособ взаимодействия со всеми типами устройств
 - жесткая связанность доменов (изменения в одном домене требуют перекомпиляции всего приложения)
 - единая база для всех доменов (все типы датчиков в одной базе)
 - сложность в тестировании (необходимо развертывать все приложение для тестирования изменений в одном домене)
@@ -48,11 +48,9 @@
 
 # Задание 2. Проектирование микросервисной архитектуры
 
-В этом задании вам нужно предоставить только диаграммы в модели C4. Мы не просим вас отдельно описывать получившиеся микросервисы и то, как вы определили взаимодействия между компонентами To-Be системы. Если вы правильно подготовите диаграммы C4, они и так это покажут.
-
 **Диаграмма контейнеров (Containers)**
 
-Добавьте диаграмму.
+[Диаграмма контейнеров](https://www.planttext.com?text=ZLPDRzj64BqRy7_OwcG1adN9gQVOLf2ujLlPL9kZiPBMCX7n0-Ighb04a6KxGQ4WIj2le8SMJL3qK1HWP2jMR4i2yWkMVw6_f3Ep9FL5jBNXHBlSdNdpvisZxlgIUx9fDTZMdOCjnvRSj8MtklAHQLSRpPfWHrAw_iU5WiUFr-kcF6fMchxmgd1Is7AzwbW5jy5jZ93tPQrXLWfRT_8btFfYTwTWSLyAhp0RUzs5iwihgolIb0t1adrMD7dTunRxk_qTKt-fQpKEJzGmF0axQg1kLS0-_AbUXo_LHDs4NVMUgKirLhSVRZ1MINY-OwyXj1pBg1_X7jww2PzbSFr6JSAs2bGVTdfg47QYo_YNO_GGaq6Ii0EVXt0me6Cw2kKVw4VXyqmMCnejgCmwkFUrNAk9hyogy2aHmiLewZq1XpWG7iAsOJ4ANzAZFc7wdf8zXMJNQfXZy8Go0PnhI8xvsc4NLds0Xl0wAe0Lmkp3is_Xz0Zk3jQP-XLYNi8lt53lDFZmEO97104Skqm0TDM0RJlbV5Ho1su2pqZeN5MRJjEkSQ-rvjCQu1gS6tcadb2V4QP_wKacoxx1U0n-aWwl7OiATrs8zb1Ks8RhDimgbwPZ8nz6QOEjxGjUbOKlco9B5Bq2n1qYuWpA1KQX9E9c3BzluVDDU1fNZ6o4FGG0BMQmdtHSCwMVHJrdQiXWCvXs2vk0X3sXqm69O02ToYvNmLqJm6sKjjbzBiKnRo7M_Nj6cHNOVO-xHtixXFu7o3UaO3tKqHXwVOrow8VdrB0WBNYj0bTXVEIXurcio2MlS5zWl9BZoxed38oUePw3kjKLwWbxGkf17PqkIp0NbvwQKlgKj2mQmXBIQp53EXwlKzAoQOay39KfV5RSfB9-9rv7iVvIHWIPN4AHbjaIlW-9DZtd4StjhbuplO7PFkM7ZpZmkiyh5LFkxX625-WB88rpYZ-AA2P98BIt96oa6ixXPXUMGnJda97QR_LGf24oxRhmvHmRsxG5AcM6y73GCz5ZCAj3mgFdRq9UrOsj0pxtI6DiTwzSPgGk07QksOjSACrUG22iR03P2Rna6hNH51qBm4BY8YsPNiVeV8Bq6vb1NqEAXuACvHr9uKAD6R4oGPfIcZKTtmMn2CkDCX4DbYiyBfkUWFosxtYp9Cq38ro_BFSeLJxQyYTK1HhEQMA60SgS7Eq93dLkhibOfBuqK1VqRtzMy_Eb70am7xk-BngyDItfWTvbjFqVrRnPD1aSXyZ7MMIlawa1vT8rYYPD9PxGfA92Hr4xOCBHBxeG1HRnqEbMpkaOAtki_ukBtU6jW_t54TFwpiwUY2MFDW0F7kDzA3vwboQMhLu1ladiEk2lfD-d4TbNJ1S6-rUuXVGyA9TB1eB3Q76Sn3ppL1VP5xnyukE5JupFFzCDmrjqcjn9_K6Q88uBS2s8vktPz73o6bwq5VLwQSfwc147CyQtS6VcbVxpb6aOfJHxLRUpqNIycDKbB3DceLy7ezGXWAyP2mXd-uI1VffoW1ffwzjeXp0Bvw13y9XB-hQHW9eRtZZE3B5e544SONejTL2M2blWAHg367rgZFyFWOGmxpsQ0FtD3JrEpyqP1Bb0kz06eOOn08gGFl9BBLx-xg2Ht1Ls3Rwy_WC0)
 
 **Диаграмма компонентов (Components)**
 
