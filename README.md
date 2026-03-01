@@ -1,5 +1,5 @@
 # Project_template
-
+(ссылки на plantUML диаграммы могут не открываться в github (пишет 403). необходимо пкм -> копировать ссылку -> втавить ссылку в строку браузера)
 
 # Задание 1. Анализ и планирование
 
@@ -78,7 +78,11 @@ REST как основной, MQTT для взаимодействия с Messag
 
 ### 2. Документация API
 
-Здесь приложите ссылки на документацию API для микросервисов, которые вы спроектировали в первой части проектной работы. Для документирования используйте Swagger/OpenAPI или AsyncAPI.
+[Gateway](https://app.swaggerhub.com/apis/mayor-24e/warmhouse0/1.0.0)
+
+[Temperature Sensor Service](https://app.swaggerhub.com/apis/mayor-24e/warmhouse-tamperature-service/1.0.0)
+
+[Heating Relay Service](https://app.swaggerhub.com/apis/mayor-24e/warmhouse-heating-service/1.0.0)
 
 # Задание 5. Работа с docker и docker-compose
 
