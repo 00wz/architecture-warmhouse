@@ -192,3 +192,20 @@ build/
 
 tmp/
 task-*
+
+# Build output
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Environment / secrets
+appsettings.Development.json
+*.pfx
+
+# OS
+.DS_Store
+Thumbs.db
